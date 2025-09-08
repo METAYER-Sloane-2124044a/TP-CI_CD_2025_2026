@@ -16,15 +16,15 @@ Ce repository contient l'ensemble des Travaux Pratiques (TP) effectués. Vous tr
 
 Vous trouverez, ci-dessous, les étapes de manipulation de base de conteneurs.
 
-![TP Docker Capture Base 1](img\TP_Docker-base_1.png?raw=true "TP Docker Capture Base 1")
+![TP Docker Capture Base 1](https://github.com/METAYER-Sloane-2124044a/TP-CI_CD_2025_2026/blob/main/img/TP_Docker-base_1.png?raw=true "TP Docker Capture Base 1")
 
-![TP Docker Capture Base 2](img\TP_Docker-base_2.png?raw=true "TP Docker Capture Base 2")
+![TP Docker Capture Base 2](https://github.com/METAYER-Sloane-2124044a/TP-CI_CD_2025_2026/blob/main/img/TP_Docker-base_2.png?raw=true "TP Docker Capture Base 2")
 
 ### Exercice 2 : Création d'un serveur web avec Docker
 
 Vous trouverez, ci-dessous, les étapes de création d'un serveur web.
 
-![TP Docker Capture Serveur Web](img\TP_Docker-serveur_web.png?raw=true "TP Docker Capture Serveur Web")
+![TP Docker Capture Serveur Web](https://github.com/METAYER-Sloane-2124044a/TP-CI_CD_2025_2026/blob/main/img/TP_Docker-serveur_web.png?raw=true "TP Docker Capture Serveur Web")
 
 ### Exercice 3 : Déploiement d'une application Python Flask
 
