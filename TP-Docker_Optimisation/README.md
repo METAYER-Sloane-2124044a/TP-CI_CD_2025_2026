@@ -38,3 +38,12 @@ A chaque étapes, lancer la commande `docker system prune --all` pour ne pas fau
 | Temps build | Taille image |
 | ----------- | ------------ |
 | 71.1s       | 1.73GB       |
+
+1. Suppression des packages inutiles
+
+Le dockerfile inclu l'installation de packages inutiles via la commande :
+`RUN apt-get update && apt-get install -y build-essential ca-certificates locales && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen`. Par ailleurs, cela alourdi notre image, nous pouvons donc supprimer cette commande.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 47.8s       | 1.66GB       |
