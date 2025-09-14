@@ -28,13 +28,13 @@ Vous devez :
 
 **Etapes**:
 
-A chaque étapes, supprimer le cache via la commande `docker build prune --all` pour ne pas fausser les résultats.
+A chaque étapes, lancer la commande `docker system prune --all` pour ne pas fausser les résultats. Cela va supprimer les conteneurs arrêtés, les images, le cache.
 
 1. Construction de l'image sans modification
 
-- Contruisez l'image node-app via le Docker file : `docker build -t node-app .`
+- Contruiser l'image node-app via le Docker file : `docker build -t node-app .`
 - Lancer l'application `docker run -d -p 3000:3000 --name node-app-test node-app` et vérifier son fonctionnement
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 49.7s       | 1.77GB       |
+| 71.1s       | 1.73GB       |
