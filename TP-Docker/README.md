@@ -30,7 +30,7 @@ Vous trouverez, ci-dessous, les étapes de création d'un serveur web.
 
 **Etapes**:
 
-1. Déplacer-vous dans TP-Docker : `cd TP-Docker`
+1. Déplacez-vous dans TP-Docker : `cd TP-Docker`
 2. Créer le fichier `app.py` contenant l'application Flask suivante:
 
 ```python
