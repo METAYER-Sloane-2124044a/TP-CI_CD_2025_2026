@@ -81,3 +81,11 @@ Il n'est pas nécessaire d'exposer plusieurs port pour notre application. En eff
 | Temps build | Taille image |
 | ----------- | ------------ |
 | 7.3s        | 217MB        |
+
+7. Utilisation de .dockerignore
+
+Nous ne souhaitons pas copier des dépendances inutiles telles que `node_modules` et alléger notre image. Pour cela, nous utilisons un fichier `.dockerignore`.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 7.1s        | 200MB        |
