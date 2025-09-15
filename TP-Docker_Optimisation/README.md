@@ -73,3 +73,11 @@ Mon application ne nécessite pas d'être compilée avant d'être exécutée. No
 | Temps build | Taille image |
 | ----------- | ------------ |
 | 6.9s        | 217MB        |
+
+6. Utilisation d'une seul port
+
+Il n'est pas nécessaire d'exposer plusieurs port pour notre application. En effet, seul le 3000 suffit. Par ailleurs, dans le fichier `server.js`, le port par défaut est 3000.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 7.3s        | 217MB        |
