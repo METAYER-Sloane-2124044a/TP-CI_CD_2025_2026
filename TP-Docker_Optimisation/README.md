@@ -50,8 +50,10 @@ Le dockerfile inclu l'installation de packages inutiles via la commande :
 
 3. Utilisation d'une meilleure image de base
 
-L'image `node:latest` représente la dernière image node. Cela implique d'installer de nombreux packages. Or, notre application ne necessite pas une telle version. Nous pouvons donc la modifier. Pour cela, nous utilisons `node:16.15-alpine`. Cela réduit notre image d'environ 1.47GB.
+L'image `node:latest` représente la dernière image node. Cela implique d'installer de nombreux packages. Or, notre application ne nécessite pas une telle version. Nous pouvons donc la modifier. En effet, `node_modules/mongodb` demande une version de node `>=16.20.1`. Nous utilisons alors une version alpine (plus légère) : `node:16.20.1-alpine`.
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 5.5s        | 187MB        |
+| 20.9s       | 194MB        |
+
+4.
