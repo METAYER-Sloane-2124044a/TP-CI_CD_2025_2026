@@ -56,4 +56,12 @@ L'image `node:latest` représente la dernière image node. Cela implique d'insta
 | ----------- | ------------ |
 | 20.9s       | 194MB        |
 
-4.
+4. Copie et installation des dépendances
+
+La commande `COPY node_modules ./node_modules` n'est pas recommandée. En effet, il est préférable de copier les fichiers `package*.json` (package-lock.json et package.json) définissant les dépendances du projet. En effet, les dépendances changent généralement moins souvent que le code du projet.
+
+La commande `npm install` installe les dépendances même si elles n'ont pas été spécifiées dans le package-lock.json. Afin de nous assurer de la bonne configuration de notre projet, nous utilisons `npm ci` qui respecte le fichier.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 7.8s        | 217MB        |
