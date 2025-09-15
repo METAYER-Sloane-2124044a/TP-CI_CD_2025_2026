@@ -65,3 +65,11 @@ La commande `npm install` installe les dépendances même si elles n'ont pas ét
 | Temps build | Taille image |
 | ----------- | ------------ |
 | 7.8s        | 217MB        |
+
+5. Suppression de la commande build
+
+Mon application ne nécessite pas d'être compilée avant d'être exécutée. Nous pouvons donc supprimer cette étape dans notre dockerfile.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 6.9s        | 217MB        |
