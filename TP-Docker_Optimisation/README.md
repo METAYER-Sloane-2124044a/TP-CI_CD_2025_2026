@@ -87,3 +87,11 @@ Nous ne souhaitons pas copier des dépendances inutiles telles que `node_modules
 | Temps build | Taille image |
 | ----------- | ------------ |
 | 7.1s        | 208MB        |
+
+8. Modification des droits
+
+Pour plus de sécurité, nous utilisons `USER node` afin de ne pas attribuer les droits administrateurs.
+
+| Temps build | Taille image |
+| ----------- | ------------ |
+| 14.9s       | 208MB        |

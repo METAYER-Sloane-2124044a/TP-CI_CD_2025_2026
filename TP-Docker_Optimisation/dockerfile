@@ -10,6 +10,6 @@ EXPOSE 3000
 
 ENV NODE_ENV=development
 
-USER root
+USER node
 
 CMD ["node", "server.js"]
