@@ -28,7 +28,7 @@ Vous devez :
 
 **Etapes**:
 
-A chaque étapes, lancer la commande `docker system prune --all` pour ne pas fausser les résultats. Cela va supprimer les conteneurs arrêtés, les images, le cache.
+A chaque étapes, lancer la commande `bash docker system prune --all` pour ne pas fausser les résultats. Cela va supprimer les conteneurs arrêtés, les images, le cache.
 
 1. Construction de l'image sans modification
 
@@ -50,21 +50,19 @@ Le dockerfile inclu l'installation de packages inutiles via la commande :
 
 3. Utilisation d'une meilleure image de base
 
-L'image `node:latest` représente la dernière image node. Cela implique d'installer de nombreux packages. Or, notre application ne nécessite pas une telle version. Nous pouvons donc la modifier. En effet, `node_modules/mongodb` demande une version de node `>=16.20.1`. Nous utilisons alors une version alpine (plus légère) : `node:16.20.1-alpine`.
+L'image `node:latest` représente la dernière image node. Cela implique d'installer de nombreux packages. Or, notre application ne nécessite pas une telle version. Nous pouvons donc la modifier. En effet, `node_modules/tr46` et `node_modules/whatwg-url` demandent une version de node `>=18`. Nous utilisons alors une version alpine (plus légère) : `node:18-alpine`.
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 20.9s       | 194MB        |
+| 12.9s       | 201MB        |
 
 4. Copie et installation des dépendances
 
 La commande `COPY node_modules ./node_modules` n'est pas recommandée. En effet, il est préférable de copier les fichiers `package*.json` (package-lock.json et package.json) définissant les dépendances du projet. En effet, les dépendances changent généralement moins souvent que le code du projet.
 
-La commande `npm install` installe les dépendances même si elles n'ont pas été spécifiées dans le package-lock.json. Afin de nous assurer de la bonne configuration de notre projet, nous utilisons `npm ci` qui respecte le fichier.
-
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 7.8s        | 217MB        |
+| 7.8s        | 201MB        |
 
 5. Suppression de la commande build
 
@@ -72,7 +70,7 @@ Mon application ne nécessite pas d'être compilée avant d'être exécutée. No
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 6.9s        | 217MB        |
+| 6.9s        | 201MB        |
 
 6. Utilisation d'une seul port
 
@@ -80,7 +78,7 @@ Il n'est pas nécessaire d'exposer plusieurs port pour notre application. En eff
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 7.3s        | 217MB        |
+| 7.3s        | 201MB        |
 
 7. Utilisation de .dockerignore
 
@@ -88,4 +86,4 @@ Nous ne souhaitons pas copier des dépendances inutiles telles que `node_modules
 
 | Temps build | Taille image |
 | ----------- | ------------ |
-| 7.1s        | 200MB        |
+| 7.1s        | 208MB        |
