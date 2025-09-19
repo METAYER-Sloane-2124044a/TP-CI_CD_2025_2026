@@ -24,7 +24,11 @@ Vous devez :
 
 **Etape préalable**:
 
-- Déplacez-vous dans TP-Docker_Optimisation : `cd TP-Docker_Optimisation`
+- Déplacez-vous dans TP-Docker_Optimisation :
+
+```bash
+cd TP-Docker_Optimisation
+```
 
 **Etapes**:
 
